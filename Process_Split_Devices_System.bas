@@ -171,13 +171,13 @@ Sub ZeuEqui()
     For i = 2 To tempLastRow
         If Shtemp.Cells(i, 4).Value = Shtemp.Cells(i + 1, 4).Value Then 'checks if next line is same country
             Select Case Trim(Shtemp.Cells(i, 5).Value) 'case for material number and description
-                Case "HYC_300"
+                Case "Model 1"
                     ShEqui.Cells(row, 1).Value = "Model 1"
                     ShEqui.Cells(row, 2).Value = "Material 1"
-                Case "HYC_150"
+                Case "Model 2"
                     ShEqui.Cells(row, 1).Value = "Model 2"
                     ShEqui.Cells(row, 2).Value = "Material 2"
-                Case "HYC_50"
+                Case "Model 3"
                     ShEqui.Cells(row, 1).Value = "Model 3"
                     ShEqui.Cells(row, 2).Value = "Material 3"
             End Select
@@ -191,13 +191,13 @@ Sub ZeuEqui()
             row = row + 1
         Else 'if next line is not same country
             Select Case Trim(Shtemp.Cells(i, 5).Value) 'case for material number and description
-                Case "HYC_300"
+                Case "Model 1"
                     ShEqui.Cells(row, 1).Value = "Model 1"
                     ShEqui.Cells(row, 2).Value = "Material 1"
-                Case "HYC_150"
+                Case "Model 2"
                     ShEqui.Cells(row, 1).Value = "Model 2"
                     ShEqui.Cells(row, 2).Value = "Material 2"
-                Case "HYC_50"
+                Case "Model 3"
                     ShEqui.Cells(row, 1).Value = "Model 3"
                     ShEqui.Cells(row, 2).Value = "Material 3"
             End Select
@@ -240,11 +240,11 @@ Sub Zset()
     For i = 2 To tempLastRow
         Shzset.Cells(row, 3) = "11014059"
         Select Case Trim(Shtemp.Cells(i, 5).Value)
-            Case "HYC_150"
+        Case "Model 1"
                 Shzset.Cells(row, 4) = "Model 1"
-            Case "HYC_300"
+        Case "Model 2"
                 Shzset.Cells(row, 4) = "Model 2"
-            Case "HYC_50"
+        Case "Model 3"
                 Shzset.Cells(row, 4) = "Model 3"
         End Select
         Shzset.Cells(row, 5) = Application.WorksheetFunction.XLookup(Shzset.Cells(row, 4), ShConfig.Range("T:T"), ShConfig.Range("S:S"))
